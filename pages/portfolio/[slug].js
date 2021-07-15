@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 
-import { getPortfolioBySlug, getPortfolios } from "../../lib/data";
+import { getPortfolioBySlug } from "../../lib/data";
+// import { useRouter } from "next/router";
 
 function Portfolio({ portfolio }) {
-  const router = useRouter();
-  if (router.isFallback) return <div>Loading...</div>;
+  // const router = useRouter();
+  // if (router.isFallback) return <div>Loading...</div>;
   return (
     <div>
       <Head>
@@ -24,19 +24,29 @@ function Portfolio({ portfolio }) {
   );
 }
 
-export const getStaticPaths = async () => {
-  const { portfolios } = await getPortfolios();
-  return {
-    paths: portfolios.map(({ slug }) => ({
-      params: {
-        slug,
-      },
-    })),
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   const { portfolios } = await getPortfolios();
+//   return {
+//     paths: portfolios.map(({ slug }) => ({
+//       params: {
+//         slug,
+//       },
+//     })),
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async (ctx) => {
+// export const getStaticProps = async (ctx) => {
+//   const { slug } = ctx.params;
+//   const { portfolio } = await getPortfolioBySlug(slug);
+//   return {
+//     props: {
+//       portfolio,
+//     },
+//   };
+// };
+
+export const getServerSideProps = async (ctx) => {
   const { slug } = ctx.params;
   const { portfolio } = await getPortfolioBySlug(slug);
   return {
