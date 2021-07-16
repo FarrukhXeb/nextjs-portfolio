@@ -21,6 +21,7 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
+        <h1>Hello from Dev</h1>
         {data?.portfolios?.map((portfolio) => (
           <div key={portfolio.id}>
             <Link href={`/portfolio/${portfolio.slug}`}>
