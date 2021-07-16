@@ -11,6 +11,7 @@ function Portfolio({ portfolio }) {
       <Head>
         <title>{portfolio.title}</title>
       </Head>
+      <img className={"w-full max-h-screen"} src={portfolio.coverImage.url} alt={portfolio.title} />
       <h1 className="text-2xl font-bold font-sans">{portfolio.title}</h1>
       <p className="text-md">{portfolio.description}</p>
       <div className="flex">
