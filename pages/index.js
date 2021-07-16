@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { getPostsAndPortfolio } from "../lib/data";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const data = await getPostsAndPortfolio();
   return {
     props: {
