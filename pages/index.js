@@ -1,42 +1,32 @@
-import Link from "next/link";
+import React from "react";
 
-import { getPostsAndPortfolio } from "../lib/data";
+import AboutArea from "../components/AboutArea";
+import ContactArea from "../components/ContactArea";
+import Hero from "../components/Hero";
+import PorfolioSection from "../components/PortfolioSection";
+import ServiceSection from "../components/ServiceSection";
+import TestimonialSlider from "../components/TestimonialSlider";
 
-export const getServerSideProps = async () => {
-  const data = await getPostsAndPortfolio();
-  return {
-    props: {
-      data,
-    },
-  };
-};
+// import { getPostsAndPortfolio } from "../lib/data";
 
-export default function Home({ data }) {
+// export const getServerSideProps = async () => {
+//   const data = await getPostsAndPortfolio();
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };
+
+export default function Home() {
   return (
     <>
-      <div>
-        <h1>Hello from Dev</h1>
-        {data?.portfolios?.map((portfolio) => (
-          <div key={portfolio.id}>
-            <Link href={`/portfolio/${portfolio.slug}`}>
-              <a>
-                <h3>{portfolio.title}</h3>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
-      <div>
-        {data?.posts?.map((post) => (
-          <div key={post.id}>
-            <Link href={`/blog/${post.slug}`}>
-              <a>
-                <h3>{post.title}</h3>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
+      <Hero />
+      <AboutArea ab3class={"wpo-about-area-4"} />
+      <ServiceSection serviceclass={"wpo-service-area-5 section-padding"} />
+      <PorfolioSection />
+      <TestimonialSlider testclass={"wpo-testimonial-area-5"} />
+      <ContactArea contactclass={"wpo-contact-area5"} />
     </>
   );
 }
