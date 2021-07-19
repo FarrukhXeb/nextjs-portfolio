@@ -16,16 +16,16 @@ const Footer = (props) => {
               <div className="wpo-footer-menu">
                 <ul>
                   <li>
-                    <Link href="/AboutPage">About</Link>
+                    <Link href="/about">About</Link>
                   </li>
                   <li>
-                    <Link href="/PorfolioGrid">Portfolio</Link>
+                    <Link href="/portfolio">Portfolio</Link>
                   </li>
                   <li>
-                    <Link href="/BlogPage">Blog</Link>
+                    <Link href="/blog">Blog</Link>
                   </li>
                   <li>
-                    <Link href="/ContactPage">Contact</Link>
+                    <Link href="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
