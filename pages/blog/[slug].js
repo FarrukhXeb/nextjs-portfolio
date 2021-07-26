@@ -1,15 +1,16 @@
 import { useRouter } from "next/router";
 
+import BlogSingle from "../../components/BlogSingle";
+import BreadCrumbs from "../../components/BreadCrumbs";
 import { getPostBySlug } from "../../lib/data";
-
 function Blog({ post }) {
   const router = useRouter();
   if (router.isFallback) return <div>Loading...</div>;
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-    </div>
+    <>
+      <BreadCrumbs pageTitle={post.title} pageSub={"Blog Details"} />
+      <BlogSingle post={post} />
+    </>
   );
 }
 
