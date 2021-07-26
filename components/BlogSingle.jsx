@@ -18,7 +18,7 @@ const BlogSingle = ({ post }) => {
             <div className="wpo-wpo-blog-content clearfix">
               <div className="post">
                 <div className="entry-media">
-                  <img src="images/blog/img-4.jpg" alt="" />
+                  <img src="/images/blog/img-4.jpg" alt="" />
                 </div>
                 <ul className="entry-meta">
                   <li>
@@ -116,7 +116,7 @@ const BlogSingle = ({ post }) => {
                       <div className="comment-theme">
                         <div className="comment-image">
                           {" "}
-                          <img src="images/blog-details/comments-author/img-1.jpg" alt="" />{" "}
+                          <img src="/images/blog-details/comments-author/img-1.jpg" alt="" />{" "}
                         </div>
                       </div>
                       <div className="comment-main-area">
@@ -150,7 +150,7 @@ const BlogSingle = ({ post }) => {
                           <div className="comment-theme">
                             <div className="comment-image">
                               {" "}
-                              <img src="images/blog-details/comments-author/img-2.jpg" alt="" />
+                              <img src="/images/blog-details/comments-author/img-2.jpg" alt="" />
                             </div>
                           </div>
                           <div className="comment-main-area">
@@ -183,7 +183,10 @@ const BlogSingle = ({ post }) => {
                             <div>
                               <div className="comment-theme">
                                 <div className="comment-image">
-                                  <img src="images/blog-details/comments-author/img-3.jpg" alt="" />{" "}
+                                  <img
+                                    src="/images/blog-details/comments-author/img-3.jpg"
+                                    alt=""
+                                  />{" "}
                                 </div>
                               </div>
                               <div className="comment-main-area">
